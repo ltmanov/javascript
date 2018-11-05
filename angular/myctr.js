@@ -1,7 +1,7 @@
 app.controller("myCtrl", function ($scope, $http)
 {
-  $scope.firstName = "Roman";
-  $scope.lastName = "Nekrasov";
+  $scope.firstName = "Lev";
+  $scope.lastName = "t";
 
 
   $http.get("getUsers.php")
