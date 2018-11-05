@@ -1,7 +1,7 @@
 app.controller("myctr", function ($scope, $http)
 {
   $scope.firstName = "Lev";
-  $scope.lastName = "t";
+  $scope.lastName = "Tmanov";
 
 
   $http.get("angular.php").then(function (response)
