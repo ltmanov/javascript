@@ -13,12 +13,12 @@ if ($conn->connect_error){
 $result = $conn->query("SELECT first_name, last_name, city FROM angular_people");
 
 while($rows = $result->fetch_array(MYSQLI_ASSOC)) {
-    if ($out != "") {$outp .= ",";}
-    $out .= '{"Name":"' . $rows["first_name"] . '",';
-    $out .= '"Last_Name":"' . $rows["last_name"] . '",';
-    $out .= '"City":"' . $rows["city"] . '"}';
+    if ($outp != "") {$outp .= ",";}
+    $outp .= '{"Name":"' . $rows["first_name"] . '",';
+    $outp .= '"Last_Name":"' . $rows["last_name"] . '",';
+    $outp .= '"City":"' . $rows["city"] . '"}';
 }
-$out ='{"records":['.$out.']}';
+$outp ='{"records":['.$outp.']}';
 
-echo($out);
+echo($outp);
 ?>
