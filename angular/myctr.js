@@ -1,4 +1,4 @@
-app.controller("myctrl", function ($scope, $http)
+app.controller("myctr", function ($scope, $http)
 {
   $scope.firstName = "Lev";
   $scope.lastName = "t";
