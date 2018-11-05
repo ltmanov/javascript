@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="add_elements.css"
+    <title></title>
+  </head>
+  <body>
+    <ul id="list">
+      <li id="element1">Lev</li>
+      <li id="element2">Roman</li>
+      <li id="element3">Spencer</li>
+    </ul>
+
+    <div class="btn" onclick="">
+<input id="name_entry" type="text" ondblclick="addLi()" placeholder="Type and double click">
+    </div>
+
+  </body>
+<script>
+  function addLi(){
+    let name = document.getElementById("name_entry").value;
+    let ul=document.getElementById("list");
+    let li=document.createElement("li");
+    let children = ul.children.length +1;
+    li.setAttribute("id","element"+children);//adds id element to li tag
+    //li.className = "fakeclass"; // adds class attributevto li tag
+    //li.appendChild(document.createTextNode(name));
+    li.innerHTML=name;
+    ul.appendChild(li);
+  }
+</script>
+
+</html>

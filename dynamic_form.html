@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="hideInputs()">
+    <form class="" action="" method="post">
+      First Name: <input onkeydown="unhideInputs()" type="text" name="firstname" id="firstname" placeholder="Enter First Name...">
+      <br />
+      <label id ="lastnamelabel"> Last Name: </label><input type="text" name="lastname" id="lastname" placeholder="Enter Last Name...">
+      <br />
+      <label class="city"> City: </label><input onkeypress="showState()" type="text" name="city" class="city" placeholder="Enter City...">
+
+    <div id="state">
+      <label>State: </label>
+      <select name="state">
+        <option values="PA">Pennsylvania</option>
+        <option values="NY">New York</option>
+        </select>
+    </div>
+
+    </form>
+  </body>
+
+<script>
+function showState(){
+document.getElementById('state').style.display="block";
+}
+
+function hideInputs(){
+  document.getElementById("lastname").style.display="none";
+  document.getElementById("lastnamelabel").style.display="none";
+  let city = document.getElementsByClassName("city");
+
+  for (var i = 0; i < city.length; i++) {
+    city[i].style.display="none";
+  }
+  document.getElementById("state").style.display="none";
+}
+
+function unhideInputs(){
+  let city = document.getElementsByClassName("city");
+  for (var i = 0; i < city.length; i++) {
+    city[i].style.display="inline";
+  }
+  document.getElementById('lastname').style.display="inline";
+  document.getElementById('lastnamelabel').style.display="inline";
+}
+
+</script>
+
+
+</html>

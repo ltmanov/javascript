@@ -1,0 +1,24 @@
+.btn {
+width: 100px;
+height: 25px;
+background: green;
+text-align: center;
+color: white;
+line-height: 25px;
+cursor: pointer;
+}
+
+#list {
+  list-style: none;
+  width: 400px;
+}
+
+ul#list >li {
+  width: 100%;
+  height: 20px;
+  background: blue;
+  margin-bottom: 3px;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+}

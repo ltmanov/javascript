@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="get" action="">
+    <input type="radio" name ="switch" value="on"
+      onclick="document.getElementById('bulb').src='images/pic_bulbon.gif'">on<br>
+    <input type="radio" name ="switch" value="off"
+      checked onclick="document.getElementById('bulb').src='images/pic_bulboff.gif'">off<br>
+    <input type="submit" name ="submit" value ="run"><br>
+    </form>
+    <img src="images/pic_bulboff.gif" id="bulb">
+  </body>
+</html>
+<!--name groups if all same, value is passed as name.value in passed array
+checked keyword preselects the value
+
+document.getElementById('').src=''
+-->
