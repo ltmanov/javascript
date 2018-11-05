@@ -4,8 +4,7 @@ app.controller("myctr", function ($scope, $http)
   $scope.lastName = "t";
 
 
-  $http.get("angular.php")
-    .then(function (response)
+  $http.get("angular.php").then(function (response)
     {
         $scope.myData = response.data.records;
     });
