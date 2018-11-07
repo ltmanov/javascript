@@ -16,11 +16,11 @@
     </li>
   </ul>
 
-  <select ng-model="selected1" ng-options="x.Name for x in myData"></select>
+  
+  <select>
+  <option ng-repeat="x in myData">{{x}}</option>
+  </select>
 
-  <select ng-model="selected2" ng-options="y.Name for (x, y) in myData"></select>
-
-  <select ng-model="selected3" ng-options="x for (x, y) in myData">  </select>
 
   <table>
     <thead>
