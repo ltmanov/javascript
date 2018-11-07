@@ -32,8 +32,10 @@
       </tr>
     </tbody>
   </table>
-  <select ng-model="selectUsers" ng-options="x.Name for (x, y) in records">
+
+  <select ng-model="selected" ng-options="x.Name for x in myData">
   </select>
+
 </div>
 </body>
 <script src="myapp.js"></script>
