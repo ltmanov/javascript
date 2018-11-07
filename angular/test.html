@@ -16,9 +16,9 @@
     </li>
   </ul>
 
-  <select ng-model="selected1" ng-options="x.model for x in myData"></select>
+  <select ng-model="selected1" ng-options="x.Name for x in myData"></select>
 
-  <select ng-model="selected2" ng-options="x for (x, y, z) in myData"></select>
+  <select ng-model="selected2" ng-options="y.Name for (x, y) in myData"></select>
 
   <select ng-model="selected3" ng-options="x for (x, y) in myData">  </select>
 
