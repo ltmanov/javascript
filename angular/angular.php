@@ -10,9 +10,8 @@ $conn = new mysqli($db_host,$db_user,$db_password,$db_name);
 if ($conn->connect_error){
   die("Connection failed: ". $conn->connect_error);
 }
-
 $result = $conn->query("SELECT first_name, last_name, city FROM angular_people");
-$outp ="";
+
 while($rows = $result->fetch_array(MYSQLI_ASSOC)) {
     if ($outp != "") {$outp .= ",";}
     $outp .= '{"Name":"' . $rows["first_name"] . '",';

@@ -7,37 +7,11 @@
 </head>
 
 <body>
-
-<div class="container">
-<p>
-<label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
-</p>
-
-<h3>Todo</h3>
-<ul id="incomplete-tasks">
-<li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-<li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-
-</ul>
-
-<h3>Completed</h3>
-<ul id="completed-tasks">
-<li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-</ul>
-</div>
-
-
-<div ng-app="application" ng-controller="controller">
-  <!-- My name is: {{ (firstName | uppercase) + " " + (lastName | uppercase) }}
-  <br>
-  My name is: {{ firstName | uppercase }} {{ lastName | uppercase }}
-  <br> -->
+<div ng-app="myapp" ng-controller="myctr">
   My name is: {{ (firstName + " " + lastName) | uppercase }}
   <br>
   <ul>
-    <li ng-repeat="x in myData | orderBy: 'Name'">
-      {{ x.Name }} - {{x.Last_Name}}, {{x.City}}
-    </li>
+    <li ng-repeat="x in myData"> {{ x.Name }} - {{x.Last_Name}}, {{x.City}} </li>
   </ul>
 
   <table>
@@ -49,25 +23,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in myData  | orderBy: 'Name'">
+      <tr ng-repeat="x in myData  | orderBy: 'City'">
         <td>{{ x.Name }}</td>
-        <td>{{ x.Last_Name}}</td>
+        <td>{{ x.Last_Name }}</td>
         <td>{{ x.City }}</td>
       </tr>
     </tbody>
   </table>
 
-  <p>Select a person:</p>
-
-    <select ng-model="selectedPerson" ng-options="x.Name for x in myData"></select>
-
-    <p>You selected:</p>
-    <p>First Name: {{selectedPerson.Name}}</p>
-    <p>Last Name: {{selectedPerson.Last_Name}}</p>
-    <p>City: {{selectedPerson.City}}</p>
-
 </div>
 </body>
-<script src="application.js"></script>
-<script src="controller.js"></script>
+<script src="myapp.js"></script>
+<script src="myctr.js"></script>
 </html>
