@@ -26,11 +26,16 @@
 </ul>
 </div>
 
-<div ng-app="myapp" ng-controller="myctr">
+
+<div ng-app="application" ng-controller="controller">
+  <!-- My name is: {{ (firstName | uppercase) + " " + (lastName | uppercase) }}
+  <br>
+  My name is: {{ firstName | uppercase }} {{ lastName | uppercase }}
+  <br> -->
   My name is: {{ (firstName + " " + lastName) | uppercase }}
   <br>
   <ul>
-    <li ng-repeat="x in myData">
+    <li ng-repeat="x in myData | orderBy: 'Name'">
       {{ x.Name }} - {{x.Last_Name}}, {{x.City}}
     </li>
   </ul>
@@ -44,7 +49,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="x in myData  | orderBy: 'City'">
+      <tr ng-repeat="x in myData  | orderBy: 'Name'">
         <td>{{ x.Name }}</td>
         <td>{{ x.Last_Name}}</td>
         <td>{{ x.City }}</td>
@@ -52,11 +57,17 @@
     </tbody>
   </table>
 
-  <select ng-model="selectedData" ng-options="x.Name for x in myData"></select>
+  <p>Select a person:</p>
 
+    <select ng-model="selectedPerson" ng-options="x.Name for x in myData"></select>
+
+    <p>You selected:</p>
+    <p>First Name: {{selectedPerson.Name}}</p>
+    <p>Last Name: {{selectedPerson.Last_Name}}</p>
+    <p>City: {{selectedPerson.City}}</p>
 
 </div>
 </body>
-<script src="myapp.js"></script>
-<script src="myctr.js"></script>
+<script src="application.js"></script>
+<script src="controller.js"></script>
 </html>
