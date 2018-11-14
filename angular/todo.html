@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Todo App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+<div ng-app="myapp" ng-controller="myctr">
+
+<p>
+  <label for="new-task">Add Item</label>
+  <input id="new-task" type="text">
+  <button>Add</button>
+</p>
+
+<h3>Todo</h3>
+<ul id="incomplete-tasks">
+
+  <!-- <li>
+    <input type="checkbox">
+    <label>Pay Bills</label>
+    <input type="text">
+    <button class="edit">Edit</button>
+    <button class="delete">Delete</button>
+  </li>
+
+  <li class="editMode">
+    <input type="checkbox">
+    <label>Go Shopping</label>
+    <input type="text" value="Go Shopping">
+    <button class="edit">Edit</button>
+    <button class="delete">Delete</button>
+  </li> -->
+
+</ul>
+
+<h3>Completed</h3>
+<ul id="completed-tasks">
+  <!-- <li>
+    <input type="checkbox" checked>
+    <label>See the Doctor</label>
+    <input type="text"><button class="edit">Edit</button>
+    <button class="delete">Delete</button>
+  </li> -->
+  </ul>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="todolist.js"></script>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="myapp" ng-controller="myctr">
+My name is: {{ (firstName + " " + lastName) | uppercase }}
+<br>
+<ul>
+<li ng-repeat="x in myData">
+{{ x.Name }} - {{x.Last_Name}}, { {x.City}}
+</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Last Name</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="x in myData  | orderBy: 'City'">
+<td>{{ x.Name }}</td>
+<td>{{ x.Last_Name}}</td>
+<td>{{ x.City }}</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</body>
+<script src="myapp.js"></script>
+<script src="myctr.js"></script>
+</html> -->
