@@ -62,7 +62,10 @@
       			ng-click="changeStatus(item.ID,item.STATUS,item.ITEM)"
       			class="items-list-cb"/>
       			<span class="items-list-mark"></span>
-              <button class="btn btn-primary" ng-click="edit = true">Edit</button>
+
+            <button class="btn btn-primary" ng-click="edit = true">Edit</button>
+            <h2 class="name"><span ng-show="!edit">{{item.ITEM}}</span><input ng-show="edit" value="{{item.ITEM}}"></h2>
+            
             <span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span>
       			<a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
       		</label>
