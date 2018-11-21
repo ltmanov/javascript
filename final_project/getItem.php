@@ -13,7 +13,5 @@ if($result->num_rows > 0) {
 		$arr[] = $row;
 	}
 }
-
-# JSON-encode the response
 echo $json_response = json_encode($arr);
 ?>
