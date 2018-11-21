@@ -74,7 +74,7 @@
                  <span ng-show="!edit">{{item.ITEM}}</span>
                  <input ng-show="edit == true" ng-model="item.ITEM" >
                </span>
-                <button ng-show="edit == true" type="submit" ng-click="edit = false" ng-click="changeStatus(item.ID,item.STATUS,item.ITEM)" >Submit</button>
+                <button ng-show="edit == true" type="submit" ng-click="edit = false ; changeStatus(item.ID,item.STATUS,item.ITEM)" >Submit</button>
               </form>
 
               <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span>
