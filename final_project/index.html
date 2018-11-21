@@ -66,9 +66,43 @@
             <button class="btn btn-primary" ng-click="edit = true">Edit</button>
 
 
-            <span class="items-list-desc" ng-class="{strike:item.STATUS==2}">  <span ng-show="!edit">{{item.ITEM}}</span><input ng-show="edit" value="{{item.ITEM}}"> <button ng-show="edit" type="submit" ng-click="submitted = true">Submit</button><span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span>
+            <span class="items-list-desc" ng-class="{strike:item.STATUS==2}">
+
+              <form name="item_edit" novalidate ng-submit="submit(item)">
+                 <div class="item-view">
+                 <span ng-show="!edit">{{item.ITEM}}</span>
+                 <input ng-show="edit == true" ng-model="item.ITEM" >
+                  </div>
+                <button type="submit" ng-click="submitted = true">Submit</button>
+              </form>
+
+
+              <span ng-show="!edit">{{item.ITEM}}</span><input ng-show="edit" value="{{item.ITEM}}">
+              <button ng-show="edit" type="submit" ng-click="submitted = true">Submit</button>
+              <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span>
+            </span>
 
             <!-- <span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span> -->
+
+
+
+
+
+
+
+
+            <form name="userForm" novalidate ng-submit="submit(people)">
+             <div class="people-view">
+             <h2 class="name">
+             <span ng-show="!edit">{{people.name}}</span>
+             <input ng-show="edit == true" ng-model="people.name" >
+              </h2>
+              </div>
+            <button type="submit" ng-click="submitted = true">Submit</button>
+            </form>
+
+
+
 
             <a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
       		</label>
