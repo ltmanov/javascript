@@ -40,7 +40,7 @@
       						<div class="input-group">
       							<input type="text" class="form-control" ng-model="itemInput" placeholder="Add New Item" autofocus required />
       							<div class="input-group-btn">
-                      <button class="btn btn-primary" ng-click="edit = true">Edit</button>
+
       								<button class="btn btn-info" type="submit" ng-click="addItem(itemInput); itemInput = null" ng-disabled="shopList.$invalid">
       									<i class="fa fa-plus"></i>&nbsp;Add Item
       								</button>
@@ -62,7 +62,8 @@
       			ng-click="changeStatus(item.ID,item.STATUS,item.ITEM)"
       			class="items-list-cb"/>
       			<span class="items-list-mark"></span>
-      			<span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span>
+              <button class="btn btn-primary" ng-click="edit = true">Edit</button>
+            <span class="items-list-desc" ng-class="{strike:item.STATUS==2}">{{item.ITEM}} <span class="date">[{{item.CREATED_AT | date:"MMM d"}}]</span></span>
       			<a ng-click="deleteItem(item.ID)" class="pull-right red"><i class="fa fa-minus-circle"></i></a>
       		</label>
       	</fieldset>
