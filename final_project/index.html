@@ -70,9 +70,10 @@
 
               <form name="item_edit" novalidate ng-submit="submit(item)">
                  <div class="item-view">
+                 <button class="btn btn-primary" ng-click="edit = true">Edit</button>
                  <span ng-show="!edit">{{item.ITEM}}</span>
                  <input ng-show="edit == true" ng-model="item.ITEM" >
-                </div>
+                 </div>
                 <button type="submit" ng-click="submitted = true">Submit</button>
               </form>
 
