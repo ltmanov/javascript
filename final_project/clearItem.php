@@ -1,6 +1,5 @@
 <?php
 require_once 'db.php';
-
 	$query = "DELETE FROM todo WHERE status = 2";
 	$result = $mysqli->query($query);
 
