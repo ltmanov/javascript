@@ -40,7 +40,7 @@ app.controller('shopController', function($scope, $http) {
       });
   };
 
-  $scope.changeItemname = function(item, status, task) {
+  $scope.changeItemName = function(item, status, task) {
       $http.post("updateItem.php?itemID="+item+"&status="+status+"&task="+task).success(function(data){
         getItem();
       });
