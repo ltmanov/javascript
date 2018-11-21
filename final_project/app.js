@@ -1,7 +1,7 @@
 
-var app = angular.module('shopApp', []);
+var app = angular.module('listApp', []);
 
-app.controller('shopController', function($scope, $http) {
+app.controller('listController', function($scope, $http) {
 
   getItem(); // Load all available items
   function getItem(){
